@@ -39,7 +39,8 @@ main {
 }
 
 .hero {
-  background: url("/src/images/hero.jpg") no-repeat center center;
+  background: url("https://raw.githubusercontent.com/official-fedorenko/my-website.github.io/refs/heads/main/src/images/hero.jpg")
+    no-repeat center center;
   background-size: cover;
   background-color: #d3d3d3; /* Резервный цвет фона */
   padding: 40px;
