@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #b0b0b0;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+  padding-bottom: 60px; /* Добавляем нижний отступ */
+}
+
+.hero {
+  background: url("/src/images/hero.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #d3d3d3; /* Резервный цвет фона */
+  padding: 40px;
+  text-align: center;
+  color: #fff; /* Изменяем цвет текста на белый для лучшей читаемости */
+  height: 50vh; /* Устанавливаем высоту секции героя */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  margin: 0 0 20px;
+  color: #ffcc00; /* Изменяем цвет текста на золотистый */
+  font-family: "Georgia", serif; /* Изменяем шрифт заголовка */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для улучшения читаемости */
+}
+
+.hero p {
+  margin: 0 0 20px;
+  color: #ffcc00; /* Изменяем цвет текста на золотистый */
+  font-family: "Georgia", serif; /* Изменяем шрифт параграфа */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для улучшения читаемости */
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+  color: #ffcc00; /* Золотистый цвет текста */
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Georgia", serif; /* Изменяем шрифт кнопки */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.hero .btn:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Более темный фон при наведении */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cards h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  text-align: center;
+  margin: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Медиазапросы для адаптации под большие экраны */
+@media (min-width: 1200px) {
+  .hero {
+    height: 70vh; /* Увеличиваем высоту секции героя на больших экранах */
+  }
+  .card {
+    width: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* Устанавливаем высоту секции героя для средних экранов */
+  }
+  .hero h2,
+  .hero p {
+    font-size: 1.2em; /* Уменьшаем размер текста для средних экранов */
+  }
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh; /* Устанавливаем высоту секции героя для маленьких экранов */
+  }
+  .hero h2,
+  .hero p {
+    font-size: 1em; /* Уменьшаем размер текста для маленьких экранов */
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #b0b0b0;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Стили для всплывающего окна */
+.modal {
+  display: none; /* Скрываем окно по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
