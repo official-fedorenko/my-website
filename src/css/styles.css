@@ -55,13 +55,14 @@ main {
 
 .hero p {
   margin: 0 0 20px;
-  font-family: "Georgia", serif; /* Изменяем шрифт параграфа */
+  font-family: "Arial Black", Gadget, sans-serif; /* Изменяем шрифт параграфа */
+  font-weight: bold; /* Делаем текст жирным */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для улучшения читаемости */
   background: linear-gradient(
     45deg,
-    #ff0000,
-    #ffa500
-  ); /* Градиентный текст: красный и оранжевый */
+    #b8860b,
+    #ffd700
+  ); /* Градиентный текст: золотистые оттенки */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
