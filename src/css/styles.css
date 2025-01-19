@@ -39,7 +39,7 @@ main {
 }
 
 .hero {
-  background: url("/src/images/hero.jpg") no-repeat center center;
+  background: url("my-website.github.io/src/src/images/hero.jpg") no-repeat center center;
   background-size: cover;
   background-color: #d3d3d3; /* Резервный цвет фона */
   padding: 40px;
