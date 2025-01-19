@@ -53,18 +53,17 @@ main {
   align-items: center;
 }
 
-.hero h2 {
-  margin: 0 0 20px;
-  color: #ffcc00; /* Изменяем цвет текста на золотистый */
-  font-family: "Georgia", serif; /* Изменяем шрифт заголовка */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для улучшения читаемости */
-}
-
 .hero p {
   margin: 0 0 20px;
-  color: #ffcc00; /* Изменяем цвет текста на золотистый */
   font-family: "Georgia", serif; /* Изменяем шрифт параграфа */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для улучшения читаемости */
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ffa500
+  ); /* Градиентный текст: красный и оранжевый */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero .btn {
@@ -134,7 +133,6 @@ main {
   .hero {
     height: 60vh; /* Устанавливаем высоту секции героя для средних экранов */
   }
-  .hero h2,
   .hero p {
     font-size: 1.2em; /* Уменьшаем размер текста для средних экранов */
   }
@@ -146,6 +144,9 @@ main {
 @media (max-width: 480px) {
   .hero {
     height: 50vh; /* Устанавливаем высоту секции героя для маленьких экранов */
+  }
+  .hero-text {
+    display: none; /* Скрываем блок с заголовком в мобильной версии */
   }
   .hero h2,
   .hero p {
